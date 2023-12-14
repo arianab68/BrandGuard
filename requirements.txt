@@ -1,0 +1,16 @@
+pandas
+transformers
+dash
+dash-bootstrap-components
+plotly
+scikit-learn
+numpy
+gunicorn
+smtplib
+email.message
+torch
+re
+json
+sklearn.ensemble
+MinMaxScaler
+sklearn.preprocessing
