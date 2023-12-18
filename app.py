@@ -25,9 +25,9 @@ card_style = {
     'padding': '20px',
     'margin': '10px 0',  # Margin for top and bottom
     'textAlign': 'center',
-    'backgroundColor': 'black',
-    'boxShadow': '2px 2px 2px lightgrey',  # Simple shadow
-    'color': 'white'
+    'backgroundColor': 'white',
+    'boxShadow': '2px 2px 2px grey',  # Simple shadow
+    'color': 'black'
 }
 
 #SCORE BARS
@@ -254,7 +254,7 @@ app.layout = html.Div([
         html.Div(style={'width': '50%', 'padding': '10px'}, children=[
             html.Div([
                 html.H3('Average Sentiment Score'),
-                html.P(f'{average_sentiment_score:.2f}', style={'color': 'green' if average_sentiment_score > 0 else 'red'}),
+                html.P(f'{average_sentiment_score:.2f}'),
             ], style=card_style),
             dcc.Graph(figure=fig_sentiment_score_bar, config={'displayModeBar': False})  # Hide the modebar of the plot
         ]),
@@ -262,7 +262,7 @@ app.layout = html.Div([
         html.Div(style={'width': '50%', 'padding': '10px'}, children=[
             html.Div([
                 html.H3('Percentage of Viral Tweets'),
-                html.P(f'{percentage_viral_tweets:.2f}%', style={'color': 'green' if percentage_viral_tweets > 0 else 'red'}),
+                html.P(f'{percentage_viral_tweets:.2f}%'),
             ], style=card_style),
             dcc.Graph(figure=fig_virality_score_bar, config={'displayModeBar': False})  # Hide the modebar of the plot
         ]),
